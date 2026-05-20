@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solicitar estatuilla — Joaquín Carrasquilla</title>
+  <meta name="description" content="Cuéntanos de la persona. Completa la solicitud para una estatuilla esculpida a mano por Joaquín Carrasquilla." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-apply">
+
+  <header class="site-header site-header--form">
+    <div class="header-inner header-inner--form">
+      <div class="logo" aria-label="Joaquín Carrasquilla">
+        <img src="assets/logo.png" alt="Joaquín Carrasquilla" width="320" height="88" />
+      </div>
+    </div>
+  </header>
+
+  <section class="apply" aria-label="Solicitud de estatuilla">
+    <div class="container apply-inner">
+      <header class="section-head section-head--center">
+        <p class="section-eyebrow">Acceso al estudio</p>
+        <h1 class="section-title">Cuéntanos de la persona.<br /><em>Nosotros hacemos el resto.</em></h1>
+        <p class="section-lead">
+          Completa la solicitud en minutos. Te respondemos en 48 horas con disponibilidad,
+          tiempos de producción y siguientes pasos.
+        </p>
+      </header>
+
+      <div class="form-shell">
+        <ul class="form-trust" aria-label="Beneficios de aplicar">
+          <li>Sin compromiso al enviar</li>
+          <li>Respuesta en 48 horas</li>
+          <li>Proceso 100% personalizado</li>
+        </ul>
+
+        <div class="form-progress" aria-label="Progreso del formulario">
+          <div class="form-progress__track">
+            <div class="form-progress__fill" data-progress-fill style="width: 33.333%"></div>
+          </div>
+          <p class="form-progress__meta">
+            <span class="form-progress__count" data-progress-count>Paso 1 de 3</span>
+            <span class="form-progress__step-name" data-progress-name>Sobre ti</span>
+          </p>
+        </div>
+
+        <form class="form form-quiz" method="post" action="#" enctype="multipart/form-data" autocomplete="on" data-quiz-form novalidate>
+
+          <fieldset class="form-step is-active" data-step="1">
+            <legend>
+              <span class="step-num">01</span>
+              <span class="step-label">Sobre ti</span>
+            </legend>
+            <div class="form-row">
+              <label>
+                <span>Tu nombre</span>
+                <input type="text" name="cliente_nombre" required placeholder="Nombre y apellido" />
+              </label>
+              <label>
+                <span>Tu correo</span>
+                <input type="email" name="cliente_email" required placeholder="tucorreo@ejemplo.com" />
+              </label>
+            </div>
+            <label>
+              <span>WhatsApp <em>(recomendado — agiliza todo)</em></span>
+              <input type="tel" name="cliente_whatsapp" placeholder="+507 6000 0000" />
+            </label>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="2" hidden>
+            <legend>
+              <span class="step-num">02</span>
+              <span class="step-label">La persona homenajeada</span>
+            </legend>
+            <div class="form-row">
+              <label>
+                <span>Nombre completo</span>
+                <input type="text" name="homenajeado_nombre" required placeholder="¿De quién es la estatuilla?" />
+              </label>
+              <label>
+                <span>¿Quién es para ti?</span>
+                <input type="text" name="homenajeado_relacion" placeholder="Padre, jefa, socio, mejor amigo…" />
+              </label>
+            </div>
+            <label>
+              <span>¿Cómo es? ¿A qué se dedica?</span>
+              <textarea name="homenajeado_descripcion" rows="4" required placeholder="Personalidad, profesión, qué lo hace inconfundible. Mientras más nos cuentes, mejor."></textarea>
+            </label>
+            <label>
+              <span>Intereses, pasiones y detalles clave</span>
+              <textarea name="homenajeado_intereses" rows="3" required placeholder="Golf, autos, su perro, su equipo, su oficina, sus hobbies…"></textarea>
+            </label>
+
+            <div class="upload-block">
+              <span class="upload-label">Fotos de referencia</span>
+              <p class="upload-hint">
+                Sube fotos claras de la persona — rostro, cuerpo completo, en acción.
+                <strong>Mínimo 4 fotos recomendadas</strong> para capturar bien su esencia.
+              </p>
+              <div class="upload-zone" id="upload-zone">
+                <input
+                  type="file"
+                  id="fotos-referencia"
+                  name="fotos_referencia[]"
+                  accept="image/*"
+                  multiple
+                  required
+                />
+                <label for="fotos-referencia" class="upload-trigger">
+                  <span class="upload-icon" aria-hidden="true">+</span>
+                  <span>Arrastra fotos aquí o haz clic para seleccionar</span>
+                  <span class="upload-formats">JPG, PNG · Varias a la vez</span>
+                </label>
+                <p class="upload-count" id="upload-count">Ninguna foto seleccionada</p>
+                <div class="upload-preview" id="upload-preview"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="3" hidden>
+            <legend>
+              <span class="step-num">03</span>
+              <span class="step-label">El encargo</span>
+            </legend>
+
+            <span class="field-label">Ocasión</span>
+            <div class="chip-group" role="radiogroup" aria-label="Ocasión">
+              <label class="chip">
+                <input type="radio" name="ocasion" value="Cumpleaños" required />
+                <span>Cumpleaños</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="ocasion" value="Aniversario" />
+                <span>Aniversario</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="ocasion" value="Boda" />
+                <span>Boda</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="ocasion" value="Retiro / jubilación" />
+                <span>Retiro</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="ocasion" value="Reconocimiento corporativo" />
+                <span>Corporativo</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="ocasion" value="Solo porque sí" />
+                <span>Solo porque sí</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="ocasion" value="Otra" />
+                <span>Otra</span>
+              </label>
+            </div>
+
+            <label>
+              <span>¿Para cuándo la necesitas?</span>
+              <input type="date" name="fecha_objetivo" />
+            </label>
+            <label>
+              <span>Algo más que debamos saber</span>
+              <textarea name="notas" rows="3" placeholder="Una anécdota, una frase que dice siempre, un detalle que no puede faltar…"></textarea>
+            </label>
+          </fieldset>
+
+          <div class="form-quiz-nav">
+            <button type="button" class="btn btn-form-back" data-quiz-back hidden>Atrás</button>
+            <button type="button" class="btn btn-form-next" data-quiz-next>Continuar</button>
+          </div>
+
+          <p class="form-legal">
+            Al enviar, aceptas que el estudio te contacte por correo o WhatsApp para coordinar tu encargo.
+            Tu información y fotos se usan únicamente para evaluar la solicitud.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-closing">
+    <footer class="site-footer site-footer--closing site-footer--form">
+      <div class="site-footer__fade" aria-hidden="true"></div>
+      <div class="container site-footer__inner">
+        <div class="site-footer__grid">
+          <div class="site-footer__logo">
+            <img src="assets/logo.png" alt="Joaquín Carrasquilla" width="180" height="50" />
+          </div>
+          <div class="site-footer__center">
+            <p>Estudio de estatuillas · Panamá</p>
+          </div>
+          <div class="site-footer__legal">
+            <p>© 2026 Joaquín Carrasquilla</p>
+            <p>Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>
