@@ -180,6 +180,19 @@ em { font-style: italic; }
     inset 20px 20px 44px -22px var(--gold-glow-strong);
 }
 
+.btn-hero:active,
+.btn-cta-band:active {
+  background: #e8dcc4;
+  color: #1a1408;
+  transform: translateY(0);
+  box-shadow:
+    0 0 0 1px rgba(196, 162, 101, 0.55),
+    0 8px 28px rgba(196, 162, 101, 0.45),
+    0 2px 12px rgba(196, 162, 101, 0.3),
+    inset 0 0 24px rgba(196, 162, 101, 0.22);
+  transition: background 0.12s ease, box-shadow 0.12s ease, transform 0.12s ease, color 0.12s ease;
+}
+
 .btn-cta-band {
   display: flex;
   width: fit-content;
@@ -428,12 +441,12 @@ em { font-style: italic; }
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  color: var(--ink);
+  color: var(--gold);
   display: block;
   font-size: 0.96em;
   letter-spacing: -0.03em;
   margin-top: 4px;
-  opacity: 0.92;
+  opacity: 1;
 }
 
 .hero-sub {
@@ -565,7 +578,7 @@ em { font-style: italic; }
   line-height: 1.55;
   letter-spacing: 0.01em;
   text-transform: none;
-  color: var(--ink);
+  color: var(--gold);
   margin: 0 0 12px;
   max-width: 34ch;
 }
@@ -593,7 +606,7 @@ em { font-style: italic; }
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--gold);
   margin: 0 0 22px;
 }
 
@@ -710,7 +723,7 @@ em { font-style: italic; }
 
 .story-point__copy span {
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.35;
   color: var(--ink-soft);
 }
 
@@ -904,16 +917,25 @@ em { font-style: italic; }
 .artist-visual {
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 32px 24px 0;
+}
+
+.artist-collage {
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 420px;
-  padding: 32px 24px 48px;
+  padding-bottom: 8px;
 }
 
 .artist-main {
   position: relative;
   z-index: 1;
-  margin: 0;
+  margin: 0 auto;
   width: 68%;
   max-width: 320px;
   border: 1px solid var(--line);
@@ -981,14 +1003,14 @@ em { font-style: italic; }
 
 .artist-stats {
   list-style: none;
-  padding: 0;
-  margin: 0 0 28px;
+  padding: 24px 0 0;
+  margin: 32px 0 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding-block: 28px;
+  position: relative;
+  z-index: 5;
 }
 
 .artist-stats li {
@@ -999,7 +1021,7 @@ em { font-style: italic; }
 
 .artist-stats strong {
   font-family: var(--serif);
-  font-size: clamp(28px, 3vw, 36px);
+  font-size: clamp(24px, 2.6vw, 36px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -1007,8 +1029,8 @@ em { font-style: italic; }
 }
 
 .artist-stats span {
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 12px;
+  line-height: 1.35;
   color: var(--ink-soft);
 }
 
@@ -1740,7 +1762,7 @@ em { font-style: italic; }
 
   .story-point__copy span {
     font-size: 11px;
-    line-height: 1.45;
+    line-height: 1.3;
   }
 
   .section-cta {
@@ -1753,9 +1775,14 @@ em { font-style: italic; }
   }
 
   .artist-visual {
+    margin-bottom: 0;
+    padding: 24px 16px 0;
+  }
+
+  .artist-collage {
     min-height: auto;
     margin-bottom: 24px;
-    padding: 24px 16px 40px;
+    padding-bottom: 40px;
   }
 
   .artist-main {
@@ -1859,9 +1886,18 @@ em { font-style: italic; }
   .artist-inset--3 { right: 8%; width: 24%; max-width: 96px; }
 
   .artist-stats {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding-block: 22px;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .artist-stats strong {
+    font-size: 22px;
+  }
+
+  .artist-stats span {
+    font-size: 10px;
+    line-height: 1.3;
   }
 
   .form-shell { padding: 24px 18px; }
