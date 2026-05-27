@@ -3,7 +3,7 @@
 
   /* Hero slideshow */
   const slides = document.querySelectorAll('.hero-slide');
-  const SLIDE_INTERVAL = 4500;
+  const SLIDE_INTERVAL = 3000;
 
   if (slides.length > 1) {
     let current = 0;
