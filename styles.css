@@ -728,6 +728,11 @@ em { font-style: italic; }
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
+
+  /* Only the three featured sculptures on mobile — one clean row */
+  .sculpt-strip__item:not(.sculpt-strip__item--mobile) {
+    display: none;
+  }
 }
 
 /* ---------- Story ---------- */
