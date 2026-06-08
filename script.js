@@ -20,6 +20,7 @@
     const canHover = window.matchMedia('(hover: hover)').matches;
     let current = 0;
     let timer = null;
+    let onScreen = true;
 
     stage.setAttribute('aria-roledescription', 'carousel');
 
@@ -117,7 +118,7 @@
       next(false);
     }
     function start() {
-      if (timer || reduceMotion) return;
+      if (timer || reduceMotion || !onScreen) return;
       timer = window.setInterval(tick, INTERVAL);
     }
     function stop() {
@@ -162,6 +163,16 @@
         start();
       }
     }, { passive: true });
+
+    /* Pause autoplay while the hero is off-screen — no point compositing six
+       images (and contending with scroll) when nobody can see them. */
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function (entries) {
+        onScreen = entries[0].isIntersecting;
+        if (onScreen) start(); else stop();
+      }, { threshold: 0 });
+      io.observe(stage);
+    }
 
     render();
     start();
