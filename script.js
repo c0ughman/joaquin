@@ -12,12 +12,11 @@
     if (slides.length === 0) return;
 
     const carousel = stage.closest('.hero-carousel') || stage.parentNode;
-    const INTERVAL = 3000;
+    const INTERVAL = 1800;
     const reduceMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;
 
-    const canHover = window.matchMedia('(hover: hover)').matches;
     let current = 0;
     let timer = null;
     let onScreen = true;
@@ -111,14 +110,11 @@
     function prev(user) { goTo(current - 1, user); }
 
     function tick() {
-      /* Live checks each tick — never relies on a sticky "paused" flag, so a
-         missed mouseleave/blur can never freeze the carousel permanently. */
       if (document.hidden) return;
-      if (canHover && typeof stage.matches === 'function' && stage.matches(':hover')) return;
       next(false);
     }
     function start() {
-      if (timer || reduceMotion || !onScreen) return;
+      if (timer || !onScreen) return;
       timer = window.setInterval(tick, INTERVAL);
     }
     function stop() {
@@ -160,7 +156,7 @@
       if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
         if (dx < 0) next(true); else prev(true);
       } else {
-        start();
+        restart();
       }
     }, { passive: true });
 

@@ -16,11 +16,11 @@
   --ink-dim: #6a6a6a;
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.22);
-  --gold: #c4a265;
-  --gold-glow: rgba(196, 162, 101, 0.28);
-  --gold-glow-strong: rgba(196, 162, 101, 0.38);
-  --gold-drop-glow: 0 8px 26px rgba(196, 162, 101, 0.24), 0 3px 12px rgba(212, 175, 110, 0.16);
-  --gold-drop-glow-strong: 0 12px 36px rgba(196, 162, 101, 0.36), 0 4px 16px rgba(212, 175, 110, 0.24), 0 0 20px rgba(196, 162, 101, 0.12);
+  --gold: #e0d4a8;
+  --gold-glow: rgba(224, 212, 168, 0.28);
+  --gold-glow-strong: rgba(224, 212, 168, 0.38);
+  --gold-drop-glow: 0 8px 26px rgba(224, 212, 168, 0.24), 0 3px 12px rgba(240, 225, 177, 0.16);
+  --gold-drop-glow-strong: 0 12px 36px rgba(224, 212, 168, 0.36), 0 4px 16px rgba(240, 225, 177, 0.24), 0 0 20px rgba(224, 212, 168, 0.12);
   --image-radius: 2px;
   --max: 1200px;
   --display: "Fraunces", Georgia, serif;
@@ -257,6 +257,7 @@ em { font-style: italic; }
   flex-direction: row;
   flex-shrink: 0;
   padding: 12px 24px;
+  margin-top: 150px;
 }
 
 .site-header .btn-hero .btn-label {
@@ -278,6 +279,7 @@ em { font-style: italic; }
   border-radius: 0;
   box-shadow: none;
   margin-bottom: -10px;
+  transform: translateY(50px) translateX(100px) scale(1.5);
 }
 
 /* ---------- Hero ---------- */
@@ -546,6 +548,14 @@ em { font-style: italic; }
   opacity: 1;
 }
 
+.text-gold {
+  color: var(--gold);
+  display: block;
+  font-size: 0.96em;
+  letter-spacing: -0.03em;
+  margin-top: 4px;
+}
+
 .hero-sub {
   font-size: clamp(16px, 1.55vw, 19px);
   line-height: 1.6;
@@ -564,6 +574,7 @@ em { font-style: italic; }
   display: flex;
   width: fit-content;
   margin-inline: 0;
+  margin-bottom: 50px;
 }
 
 /* ---------- As seen on ---------- */
@@ -924,6 +935,14 @@ em { font-style: italic; }
   padding: 22px 0 22px 28px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   margin: 36px 0 48px !important;
+}
+
+.story-pull__attribution {
+  display: block;
+  font-size: 0.75em;
+  font-style: normal;
+  margin-top: 12px;
+  color: var(--ink-soft);
 }
 
 /* ---------- How it works ---------- */
@@ -1905,7 +1924,7 @@ em { font-style: italic; }
 
 .site-footer__logo img {
   display: block;
-  height: 52px;
+  height: 47px;
   width: auto;
   opacity: 0.92;
 }
@@ -2334,7 +2353,7 @@ em { font-style: italic; }
   }
 
   .site-footer__logo img {
-    height: 44px;
+    height: 40px;
     margin-inline: auto;
   }
 
