@@ -293,6 +293,13 @@ em { font-style: italic; }
   overflow: hidden;
 }
 
+/* Desktop has no header bar, so give the hero breathing room at the top */
+@media (min-width: 961px) {
+  .hero {
+    padding-top: 60px;
+  }
+}
+
 .hero-inner {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2001,6 +2008,7 @@ em { font-style: italic; }
 
   .logo img {
     height: 60px;
+    width: auto;
     transform: none;
   }
 
@@ -2271,6 +2279,7 @@ em { font-style: italic; }
 
   .logo img {
     height: 50px;
+    width: auto;
   }
 
   .btn-header {
