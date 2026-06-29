@@ -270,7 +270,7 @@ em { font-style: italic; }
 }
 
 .logo img {
-  height: 135px;
+  height: 150px;
   width: auto;
   display: block;
   opacity: 0.95;
@@ -292,13 +292,6 @@ em { font-style: italic; }
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px 40px;
   align-items: center;
-}
-
-/* Desktop only: lift the hero up to close the empty space below the header */
-@media (min-width: 961px) {
-  .hero {
-    margin-top: -50px;
-  }
 }
 
 .hero-content {
@@ -2209,7 +2202,7 @@ em { font-style: italic; }
   }
 
   .hero {
-    padding: 4px 0 48px;
+    padding: 12px 0 56px;
   }
 
   .hero-inner {
@@ -2217,7 +2210,7 @@ em { font-style: italic; }
   }
 
   .hero-slideshow {
-    height: clamp(330px, 84vw, 440px);
+    height: clamp(380px, 96vw, 520px);
   }
 
   .hero-slide {
