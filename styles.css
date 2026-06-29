@@ -270,20 +270,20 @@ em { font-style: italic; }
 }
 
 .logo img {
-  height: 150px;
+  height: 135px;
   width: auto;
   display: block;
   opacity: 0.95;
   border-radius: 0;
   box-shadow: none;
-  transform: translateX(100px) translateY(60px);
+  transform: translateX(100px);
   transform-origin: left center;
 }
 
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  padding: 20px 0 44px;
+  padding: 8px 0 44px;
   overflow: hidden;
 }
 
@@ -2127,7 +2127,7 @@ em { font-style: italic; }
 }
 
 @media (max-width: 640px) {
-  :root { --header-h: 88px; }
+  :root { --header-h: 66px; }
 
   .container {
     padding-left: 20px;
@@ -2202,7 +2202,7 @@ em { font-style: italic; }
   }
 
   .hero {
-    padding: 12px 0 56px;
+    padding: 2px 0 48px;
   }
 
   .hero-inner {
@@ -2210,7 +2210,7 @@ em { font-style: italic; }
   }
 
   .hero-slideshow {
-    height: clamp(380px, 96vw, 520px);
+    height: min(84vw, 400px);
   }
 
   .hero-slide {
