@@ -270,12 +270,14 @@ em { font-style: italic; }
 }
 
 .logo img {
-  height: 60px;
+  height: 150px;
   width: auto;
   display: block;
   opacity: 0.95;
   border-radius: 0;
   box-shadow: none;
+  transform: translateX(100px) translateY(60px);
+  transform-origin: left center;
 }
 
 /* ---------- Hero ---------- */
@@ -1976,6 +1978,18 @@ em { font-style: italic; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
+  /* Centered, no offset below desktop */
+  :root { --header-h: 104px; }
+
+  .header-inner {
+    justify-content: center;
+  }
+
+  .logo img {
+    height: 96px;
+    transform: none;
+  }
+
   .story-points {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -2113,7 +2127,7 @@ em { font-style: italic; }
 }
 
 @media (max-width: 640px) {
-  :root { --header-h: 58px; }
+  :root { --header-h: 88px; }
 
   .container {
     padding-left: 20px;
@@ -2242,7 +2256,7 @@ em { font-style: italic; }
   }
 
   .logo img {
-    height: 44px;
+    height: 78px;
   }
 
   .btn-header {

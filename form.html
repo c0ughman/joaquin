@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 
+  <!-- Preload the hero LCP image so it paints fast -->
+  <link rel="preload" as="image" href="assets/cliente-con-estatuilla/IMG_2627-e7383acf-987b-4b31-b4e6-dbb208cc5019.png" fetchpriority="high" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,10 +21,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="#top" aria-label="Joaquín Carrasquilla — inicio">
-        <img src="assets/logo.png" alt="Joaquín Carrasquilla" width="320" height="88" decoding="async" />
-      </a>
-      <a class="btn btn-hero" href="solicitar.html">
-        <span class="btn-label">Aplicar para una estatuilla</span>
+        <img src="assets/logo.png" alt="Joaquín Carrasquilla" width="320" height="88" fetchpriority="high" decoding="async" />
       </a>
     </div>
   </header>
@@ -48,42 +48,42 @@
       <div class="hero-carousel" aria-label="Galería de estatuillas">
         <div class="hero-slideshow">
           <figure class="hero-slide">
-            <img src="assets/cliente-con-estatuilla/IMG_2627-e7383acf-987b-4b31-b4e6-dbb208cc5019.png" alt="Nayib Bukele con su estatuilla" decoding="async" />
+            <img src="assets/cliente-con-estatuilla/IMG_2627-e7383acf-987b-4b31-b4e6-dbb208cc5019.png" alt="Nayib Bukele con su estatuilla" fetchpriority="high" decoding="async" />
             <figcaption>
               <strong>Nayib Bukele</strong>
               <span>Presidente de El Salvador</span>
             </figcaption>
           </figure>
           <figure class="hero-slide">
-            <img src="assets/cliente-con-estatuilla/Maria Corina Machado.jpeg" alt="María Corina Machado con su estatuilla" decoding="async" />
+            <img src="assets/cliente-con-estatuilla/Maria Corina Machado.jpeg" alt="María Corina Machado con su estatuilla" fetchpriority="low" decoding="async" />
             <figcaption>
               <strong>María Corina Machado</strong>
               <span>Política · Referente regional</span>
             </figcaption>
           </figure>
           <figure class="hero-slide">
-            <img src="assets/cliente-con-estatuilla/Mis_esculturas__reunidas_en_un_mismo_espacio._Cada_pieza_con_su_historia__cada_detalle_con_su_r-2-c04f47b6-1784-4fe5-88b1-f902768b5a1e.png" alt="Monseñor Ulloa con su estatuilla en exposición" decoding="async" />
+            <img src="assets/cliente-con-estatuilla/Mis_esculturas__reunidas_en_un_mismo_espacio._Cada_pieza_con_su_historia__cada_detalle_con_su_r-2-c04f47b6-1784-4fe5-88b1-f902768b5a1e.png" alt="Monseñor Ulloa con su estatuilla en exposición" fetchpriority="low" decoding="async" />
             <figcaption>
               <strong>Monseñor José Domingo Ulloa</strong>
               <span>Arzobispo de Panamá</span>
             </figcaption>
           </figure>
           <figure class="hero-slide">
-            <img src="assets/cliente-con-estatuilla/IMG_2630-4d0dea5f-8acf-4399-ab27-2319d4a610f1.png" alt="Ismael Cala con su estatuilla en Cala CNN" decoding="async" />
+            <img src="assets/cliente-con-estatuilla/IMG_2630-4d0dea5f-8acf-4399-ab27-2319d4a610f1.png" alt="Ismael Cala con su estatuilla en Cala CNN" fetchpriority="low" decoding="async" />
             <figcaption>
               <strong>Ismael Cala</strong>
               <span>Presentador · Cala · CNN en Español</span>
             </figcaption>
           </figure>
           <figure class="hero-slide">
-            <img src="assets/cliente-con-estatuilla/IMG_2628-bec510d0-ad0a-4d97-8ea1-d12f23ac2057.png" alt="María Celeste con su estatuilla" decoding="async" />
+            <img src="assets/cliente-con-estatuilla/IMG_2628-bec510d0-ad0a-4d97-8ea1-d12f23ac2057.png" alt="María Celeste con su estatuilla" fetchpriority="low" decoding="async" />
             <figcaption>
               <strong>María Celeste Arrarás</strong>
               <span>Conductora · Univisión</span>
             </figcaption>
           </figure>
           <figure class="hero-slide">
-            <img src="assets/cliente-con-estatuilla/Franco-deVita.jpeg" alt="Franco de Vita con su estatuilla" decoding="async" />
+            <img src="assets/cliente-con-estatuilla/Franco-deVita.jpeg" alt="Franco de Vita con su estatuilla" fetchpriority="low" decoding="async" />
             <figcaption>
               <strong>Franco de Vita</strong>
               <span>Cantautor internacional</span>
@@ -437,7 +437,7 @@
 
         <article class="trust-badge">
           <div class="trust-badge__icon" aria-hidden="true">
-            <img src="assets/trust-icons/unique.png" alt="" width="100" height="100" decoding="async" />
+            <img src="assets/trust-icons/unique.png" alt="" width="100" height="100" loading="lazy" decoding="async" />
           </div>
           <h3 class="trust-badge__title">Única en el mundo</h3>
           <p class="trust-badge__tags">Firmada · Numerada · Con certificado</p>
@@ -446,7 +446,7 @@
 
         <article class="trust-badge">
           <div class="trust-badge__icon" aria-hidden="true">
-            <img src="assets/trust-icons/hand-made.png" alt="" width="100" height="100" decoding="async" />
+            <img src="assets/trust-icons/hand-made.png" alt="" width="100" height="100" loading="lazy" decoding="async" />
           </div>
           <h3 class="trust-badge__title">Esculpida a mano</h3>
           <p class="trust-badge__tags">En el estudio · Sin atajos · Semanas de trabajo</p>
@@ -455,7 +455,7 @@
 
         <article class="trust-badge">
           <div class="trust-badge__icon" aria-hidden="true">
-            <img src="assets/trust-icons/exclusive.png" alt="" width="100" height="100" decoding="async" />
+            <img src="assets/trust-icons/exclusive.png" alt="" width="100" height="100" loading="lazy" decoding="async" />
           </div>
           <h3 class="trust-badge__title">Muy pocas al año</h3>
           <p class="trust-badge__tags">Por encargo · Cupo limitado · Una por persona</p>
@@ -473,6 +473,7 @@
         src="assets/expocision/gente_en_expo_addison-1b108e00-6ac4-42f6-a2d3-d2f6da8dff81.png"
         alt=""
         aria-hidden="true"
+        loading="lazy" decoding="async"
       />
     </div>
     <div class="cta-band__scrim"></div>
@@ -493,7 +494,7 @@
       <div class="container site-footer__inner">
         <div class="site-footer__grid">
           <div class="site-footer__logo">
-            <img src="assets/logo.png" alt="Joaquín Carrasquilla" width="180" height="50" decoding="async" />
+            <img src="assets/logo.png" alt="Joaquín Carrasquilla" width="180" height="50" loading="lazy" decoding="async" />
           </div>
           <div class="site-footer__center">
             <p>Estudio de estatuillas · Panamá</p>
