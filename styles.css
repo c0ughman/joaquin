@@ -1981,6 +1981,15 @@ em { font-style: italic; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
+  /* Reset the dramatic desktop logo/button offsets — they only suit wide screens */
+  .logo img {
+    transform: none;
+  }
+
+  .site-header .btn-hero {
+    margin-top: 0;
+  }
+
   .story-points {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -2013,15 +2022,6 @@ em { font-style: italic; }
 
   .proof-grid { grid-template-columns: repeat(2, 1fr); }
   .proof-card--wide { grid-column: span 2; }
-
-  .proof-grid .proof-card:nth-child(1) { order: 1; }
-  .proof-grid .proof-card:nth-child(2) { order: 2; }
-  .proof-grid .proof-card:nth-child(3) { order: 3; }
-  .proof-grid .proof-card:nth-child(4) { order: 4; }
-  .proof-grid .proof-cta { order: 5; }
-  .proof-grid .proof-card:nth-child(5) { order: 6; }
-  .proof-grid .proof-card:nth-child(6) { order: 7; }
-  .proof-grid .proof-card:nth-child(7) { order: 8; }
 
   .proof-cta {
     grid-column: 1 / -1;
@@ -2155,16 +2155,26 @@ em { font-style: italic; }
   }
 
   .story-points {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .story-point {
-    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .story-point__media {
+    flex: 0 0 38%;
   }
 
   .story-point__media img {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 1 / 1;
+  }
+
+  .story-point__copy {
+    flex: 1 1 auto;
   }
 
   .story-point__copy strong {
@@ -2185,6 +2195,7 @@ em { font-style: italic; }
 
   .site-header .btn-hero {
     padding: 10px 14px;
+    margin-top: 0;
   }
 
   .site-header .btn-hero .btn-label {
@@ -2246,8 +2257,9 @@ em { font-style: italic; }
   }
 
   .logo img {
-    height: 68px;
-    margin-bottom: -8px;
+    height: 64px;
+    margin-bottom: -6px;
+    transform: none;
   }
 
   .btn-header {
