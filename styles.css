@@ -263,16 +263,21 @@ em { font-style: italic; }
   font-size: 14px;
 }
 
-/* Logo lives inside the hero content, centered and fluid */
+/* On desktop the header logo is hidden — the in-hero logo is used instead */
+.site-header--mobilelogo {
+  display: none;
+}
+
+/* Desktop: logo lives inside the hero content, centered and small */
 .hero-content .logo {
   display: block;
   width: 100%;
-  margin: 0 0 22px;
+  margin: 0 0 20px;
   text-align: center;
 }
 
 .hero-content .logo img {
-  width: clamp(220px, 60%, 340px);
+  width: clamp(130px, 12vw, 170px);
   height: auto;
   margin: 0 auto;
   display: block;
@@ -1979,8 +1984,16 @@ em { font-style: italic; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
-  /* Centered, no offset below desktop */
+  /* Mobile/tablet: use the header logo, hide the in-hero one */
   :root { --header-h: 104px; }
+
+  .site-header--mobilelogo {
+    display: block;
+  }
+
+  .hero-content .logo {
+    display: none;
+  }
 
   .header-inner {
     justify-content: center;
@@ -2060,12 +2073,12 @@ em { font-style: italic; }
 
   .hero-content {
     grid-column: auto;
-    order: 1;
+    order: 2;
   }
 
   .hero-carousel {
     grid-column: auto;
-    order: 2;
+    order: 1;
   }
 
   .story-intro {
