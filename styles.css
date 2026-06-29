@@ -263,21 +263,22 @@ em { font-style: italic; }
   font-size: 14px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  overflow: visible;
+/* Logo lives inside the hero content, centered and fluid */
+.hero-content .logo {
+  display: block;
+  width: 100%;
+  margin: 0 0 22px;
+  text-align: center;
 }
 
-.logo img {
-  height: 135px;
-  width: auto;
+.hero-content .logo img {
+  width: clamp(220px, 60%, 340px);
+  height: auto;
+  margin: 0 auto;
   display: block;
   opacity: 0.95;
   border-radius: 0;
   box-shadow: none;
-  transform: translateX(100px) translateY(50px);
-  transform-origin: left center;
 }
 
 /* ---------- Hero ---------- */
@@ -2059,12 +2060,12 @@ em { font-style: italic; }
 
   .hero-content {
     grid-column: auto;
-    order: 2;
+    order: 1;
   }
 
   .hero-carousel {
     grid-column: auto;
-    order: 1;
+    order: 2;
   }
 
   .story-intro {
